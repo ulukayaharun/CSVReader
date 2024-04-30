@@ -37,7 +37,7 @@ def reader_and_change(filename):
                     df['author'] = np.where(df['pageUrlCleanNoProtcol'] == original_url, "", df['author']) 
                     print("PROBLEM")   #erişim izni olmayanları "" çevirir
 
-    df.to_csv("_04_25_2024_updated.csv", index=False, encoding="utf-8-sig")
+    df.to_csv(f"{filename}_updated.csv", index=False, encoding="utf-8-sig")
     
 if __name__ =="__main__":
     reader_and_change("_04_25_2024.csv")
